@@ -1,0 +1,13 @@
+https://github.com/vijaynvb/ClaudeAPP
+
+    1. Model Invocation 
+    2. model selection
+    3. model configuration for invocation
+    4. streaming and non-streaming invocation
+    5. structured and unstructured data handling
+    6. prompt templating 
+        1. system 
+        2. message [user, assistant, function]
+        3. interpolation
+    7. prompt engineering
+    8. prompt evaluation
