@@ -1,0 +1,41 @@
+
+
+prompt engg specific to claude:
+    1. stop sequence = llm not generate any content once the keyword is found in generation
+    2. prefilling = giving leads for your llm to generate content 
+    3. 
+
+usernessage = genereate json 
+assitantmessage = "here is the json content below ```json ------- ```
+```json
+{
+    name: "vijay"
+}
+```
+
+
+List 1 to 100 in a sequence. but start from {5}  and stop at {10}
+
+Message(id='msg_011CeCE6e9kS3Pg4wPD9i19W', container=None, content=[TextBlock(citations=None, text='1, 2, 3, 4', type='text')], model='claude-sonnet-4-5-20250929', role='assistant', stop_details=None, stop_reason='stop_sequence', stop_sequence=', 5', type='message', usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='not_available', input_tokens=15, output_tokens=14, output_tokens_details=None, server_tool_use=None, service_tier='standard'))
+
+
+Zero Shot
+Few Shot
+Chain of thought -> interpollation  <name> {name} </name>
+
+
+email -> manager [british english] [approves] and employee [france - french] [leave request]
+
+note: smtp -> variable 
+
+"Translate the text that is delimited by triple backticks into a style that is British English in a calm and respectful tone\n. text: ```\nObjet : Demande de Congé\n\nCher [Nom du Responsable],\n\nJe m'appelle John et je travaille au sein de la société XYZ.\nJ'aimerais solliciter une demande de congé pour partir en vacances.\nSerait-il possible de discuter des dates qui conviendraient le mieux pour l'équipe et l'entreprise?\n\nJe vous remercie par avance pour votre compréhension et j'attends votre retour.\n\nCordialement,\nJohn\n```\n"
+
+"Translate the text that is delimited by triple backticks into a style that is a polite tone that speaks in French. text: ```\nSubject: Re: Demande de Congé\n\nHi John,\n\nThank you for reaching out. I've reviewed your request for vacation leave.Please provide the specific dates you'd like to take off, so we can ensure proper coverage during your absence.\n\nLooking forward to your response.\n\nBest regards,\n[Manager's Name]\n```\n"
+
+"# Objet : Rép. : Demande de Congé\n\nCher John,\n\nJe vous remercie de m'avoir contacté. J'ai examiné votre demande de congé avec attention.\n\nPourriez-vous, s'il vous plaît, me communiquer les dates précises durant lesquelles vous souhaiteriez prendre vos congés ? Cela nous permettra de nous assurer que nous disposons d'une couverture appropriée pendant votre absence.\n\nJe demeure à votre entière disposition et attends avec intérêt votre réponse.\n\nCordialement,\n[Nom du Responsable]"
+
+
+
+prompt -> llm -> response [manually, code, llm [llm as judge]]
+
+Prompt Evaluation -> AI Developer 

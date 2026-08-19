@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that validates an AWS S3 bucket name according to AWS naming rules (3-63 characters, lowercase letters, numbers, and hyphens only, must start and end with letter or number)"
+  },
+  {
+    "task": "Create a JSON object that represents an AWS IAM policy allowing read-only access to a specific S3 bucket named 'my-data-bucket'"
+  },
+  {
+    "task": "Write a regular expression that matches valid AWS EC2 instance IDs (format: i- followed by 17 hexadecimal characters)"
+  }
+]
