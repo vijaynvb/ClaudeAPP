@@ -28,14 +28,40 @@ email -> manager [british english] [approves] and employee [france - french] [le
 
 note: smtp -> variable 
 
-"Translate the text that is delimited by triple backticks into a style that is British English in a calm and respectful tone\n. text: ```\nObjet : Demande de Congé\n\nCher [Nom du Responsable],\n\nJe m'appelle John et je travaille au sein de la société XYZ.\nJ'aimerais solliciter une demande de congé pour partir en vacances.\nSerait-il possible de discuter des dates qui conviendraient le mieux pour l'équipe et l'entreprise?\n\nJe vous remercie par avance pour votre compréhension et j'attends votre retour.\n\nCordialement,\nJohn\n```\n"
+prompt 1 = "Translate the text that is delimited by triple backticks into a style that is British English in a calm and respectful tone\n. text: ```\nObjet : Demande de Congé\n\nCher [Nom du Responsable],\n\nJe m'appelle John et je travaille au sein de la société XYZ.\nJ'aimerais solliciter une demande de congé pour partir en vacances.\nSerait-il possible de discuter des dates qui conviendraient le mieux pour l'équipe et l'entreprise?\n\nJe vous remercie par avance pour votre compréhension et j'attends votre retour.\n\nCordialement,\nJohn\n```\n"
 
-"Translate the text that is delimited by triple backticks into a style that is a polite tone that speaks in French. text: ```\nSubject: Re: Demande de Congé\n\nHi John,\n\nThank you for reaching out. I've reviewed your request for vacation leave.Please provide the specific dates you'd like to take off, so we can ensure proper coverage during your absence.\n\nLooking forward to your response.\n\nBest regards,\n[Manager's Name]\n```\n"
+response 1="# Subject: Leave Request\n\nDear [Manager's Name],\n\nMy name is John and I am employed by XYZ Company.\n\nI would like to request leave in order to take a holiday. Would it be possible to discuss the dates that would be most convenient for both the team and the company?\n\nI thank you in advance for your understanding and I look forward to hearing from you.\n\nYours sincerely,\nJohn"
 
-"# Objet : Rép. : Demande de Congé\n\nCher John,\n\nJe vous remercie de m'avoir contacté. J'ai examiné votre demande de congé avec attention.\n\nPourriez-vous, s'il vous plaît, me communiquer les dates précises durant lesquelles vous souhaiteriez prendre vos congés ? Cela nous permettra de nous assurer que nous disposons d'une couverture appropriée pendant votre absence.\n\nJe demeure à votre entière disposition et attends avec intérêt votre réponse.\n\nCordialement,\n[Nom du Responsable]"
+prompt 2 = "Translate the text that is delimited by triple backticks into a style that is a polite tone that speaks in French. text: ```\nSubject: Re: Demande de Congé\n\nHi John,\n\nThank you for reaching out. I've reviewed your request for vacation leave.Please provide the specific dates you'd like to take off, so we can ensure proper coverage during your absence.\n\nLooking forward to your response.\n\nBest regards,\n[Manager's Name]\n```\n"
+
+response 2="# Objet : Rép. : Demande de Congé\n\nCher John,\n\nJe vous remercie de m'avoir contacté. J'ai examiné votre demande de congé avec attention.\n\nPourriez-vous, s'il vous plaît, me communiquer les dates précises durant lesquelles vous souhaiteriez prendre vos congés ? Cela nous permettra de nous assurer que nous disposons d'une couverture appropriée pendant votre absence.\n\nJe demeure à votre entière disposition et attends avec intérêt votre réponse.\n\nCordialement,\n[Nom du Responsable]"
 
 
 
-prompt -> llm -> response [manually, code, llm [llm as judge]]
+prompt -> llm [opus] -> response [manually, code [pydantic], llm [opus] [llm as judge [without a bias]]]
+    [reasonging, correctness, fatifullness, ... [language]] context trained 
 
 Prompt Evaluation -> AI Developer 
+
+generate a json object to define a person with fields of name and age
+
+json validator
+{
+    name: "vijay",
+    age: 12
+}
+
+
+evaluation: 
+   input dataset = 100 to 1000 -> dataset.json
+   out response = 100 to 1000  -> resultset.json
+
+   evaluator -> 
+
+
+tool use:
+    Built in 
+    Custom
+mcp - 
+    third party:
+    custom develop mcp server
