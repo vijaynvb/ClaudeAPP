@@ -1,0 +1,15 @@
+## Tool Use Implementation steps in claude
+
+1. Tool: Define a functions to perform specific tasks or operations that you want to automate or simplify. 
+These functions should be modular and reusable.
+2. Tool_Schema: Create a schema that outlines the structure and expected inputs/outputs of your functions. 
+Description and Name of the tool should be clearly defined.
+3. Integrate with claude code: Use the defined functions and schema within your claude code to perform the desired operations.
+4. claude code invokes the user message to preocess the request with claude llm.
+5. Claude will generate a response to use tool as Tool_Use component. 
+The response will include the necessary parameters and values to call the tool functions.
+6. Claude code should handle the response and invoke the tool functions with the provided parameters and values.
+7. results from the tool function should be added as user message with Tool_ResultBlock component to enhance the context.
+8. pass the user message the claude llm to process the request.
+9. claude llm generates the final response based on the user message.
+

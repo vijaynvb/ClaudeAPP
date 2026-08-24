@@ -1,0 +1,68 @@
+
+Enhancing Context
+
+Client [Python Claudesdk]  -> data ->   [containerid] server [LLM] [Cache 5m, 1 hr]
+                        response [containerid]
+                        cachewrite 10$
+                        cachehit 1$
+                        cacheread 
+image content[]
+        question        ->      
+
+
+
+Advanced Features:
+    1. Deep thinking 
+    2. Vision -> images
+    3. PDF, Citations [reference from the context]
+    4. Cache the prompts [5 min, 1 hr]
+    5. Code execution
+
+realtime and propritery
+
+tool use:
+    Built in 
+    Custom
+mcp - 
+    third party:
+    custom develop mcp server
+
+
+task -> realtime content and realtime activity  [tool calling] [LLM]
+
+    function -> specific -> return only one value
+        1. fetch stock details 
+        2. access the db data 
+        3. fetch the rest api
+        4. io operation create, write, read, update file 
+
+Application -> tools 
+
+    LLM -> Config 
+        1. Tools = [function1_metadata(description, parameters, return), function2]
+
+
+add(a,b){
+    return a+b+4;
+}
+
+sub()
+
+Mul()
+
+response = model config [add, sub, mul]
+claude sdk -> 11 -> invoke the add(3, 4)
+this is the tools result [11] -> llm 
+
+prompt1 = "what is sum of 3 and 4 use tool calling"
+response = sum of 3 and 4 is 11 as per the tool  
+
+prompt1 = "compute is sum of 3 and 4 finally multiply by 5  use tool calling"
+    1. invoke add
+    2. multiply
+    response
+
+Claudes BUilt
+    1. code execution
+    2. web search 
+    3. io
