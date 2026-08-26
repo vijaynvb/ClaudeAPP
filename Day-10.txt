@@ -1,3 +1,10 @@
+
+Context -> 
+
+AI App. -> Context [Prompt, tool use, RAG, MCP, Memory]  ->  LLM's
+claude code [Antropic, claude_agent_SDK]-> Context. ->  Claude [llm]
+
+
 ## Tool Use Implementation steps in claude
 
 1. Tool: Define a functions to perform specific tasks or operations that you want to automate or simplify. 
@@ -13,3 +20,33 @@ The response will include the necessary parameters and values to call the tool f
 8. pass the user message the claude llm to process the request.
 9. claude llm generates the final response based on the user message.
 
+## MCP -  Tool 
+
+github copilot
+claude cowork
+ AI APP -> MCP Clinet -> [io, socket, api] -> MCP server [4 tools, add(2,3), get-erngy-price, gettodolist[api], greeting() -> hello]
+
+## RAG
+
+Message(id='msg_011CeMgbuNAXhdSN4PAmEb3n', container=None, content=[ToolUseBlock(id='toolu_01YYZ97dg1ZByJxvJsfjiLMs', caller=DirectCaller(type='direct'), input={'date_format': '%H:%M:%S'}, name='get_current_datetime', type='tool_use')], model='claude-sonnet-4-5-20250929', role='assistant', stop_details=None, stop_reason='tool_use', stop_sequence=None, type='message', usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='not_available', input_tokens=624, output_tokens=62, output_tokens_details=None, server_tool_use=None, service_tier='standard'))
+
+
+tool a (agr1) - 
+{
+    error
+}
+
+tool b(arg1, arg2) -
+
+Toolselection -> model [Reaasoning, thinking]
+
+
+tool methods mytools
+mcp tool mcptools
+    message.create{
+        model= model
+        tools = [mytools, mcptools]
+    }
+
+Bundle of server [docker image]
+bundle it as service [artifact how to connect]
