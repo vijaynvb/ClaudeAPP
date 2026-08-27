@@ -1,0 +1,6 @@
+1. Built in Tool Use - Agents
+2. Responsible AI: 
+    1. Guardrails, Permissions and Safety Measures
+
+Exam Prep Guide: 
+Mock exams to try.
