@@ -1,0 +1,4 @@
+Project Notes
+=============
+Auth module needs password hashing
+Utils module needs input validation

@@ -1,0 +1,1 @@
+This authentication module provides simple login and logout functions that verify user identity based on username matching 'admin' and manage user sessions.

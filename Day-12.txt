@@ -4,3 +4,30 @@
 
 Exam Prep Guide: 
 Mock exams to try.
+
+
+client                              server [llm] [knowledge]
+
+websearch [browser]
+download the search results []         to format the content 
+
+
+1. claude llm is giving you the commands to execute on the users input.
+
+    delete all the files in root directory 
+    rm -rf /root 
+    PII GDPR HIPPA
+
+1. Permissions and safety measures
+2. gaurd rails 
+    custom tools 
+        access customer db and generate a report and send email and discard 
+    built-in tool
+        delete all the files in root directory 
+        rm -rf /root 
+
+
+client                             server [llm] , tools
+prompt [what data is in it]         return [data] assimessage 
+    1. llm
+    2. tools
