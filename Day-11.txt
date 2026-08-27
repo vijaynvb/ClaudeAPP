@@ -1,0 +1,53 @@
+RAG implementation steps in claude
+    1. code approach []
+    2. no code appraoch [aws bedrock, opensearch] 
+        s3 -> pdf 
+        knowledgebase -> [s3 - autosync] -> what embeding, cunking, vdb, 
+        boto3 -> aws service -> bedrockservice -> kb -> prompts
+        chromadb -> fasii
+
+Agents: 
+    Tools: 
+        function 
+        mcp tool -> rag system [prompt] -> [chunks]
+
+Agentic AI implementation steps in claude
+
+GenAI -> API - SDK - llm
+Agent -> task -> [llm, tools, mcp, memory, prompt techniques, rag]
+Agentic AI -> Goal -> executing multiple tasks [agents] 
+    
+    goal1 = recruit a sse on java fsd by posting in internal portal
+    goal2 = recruit a sse on java fsd by posting in naukri
+    goal3 = recruit a sse on java fsd by posting in both
+
+    short term memory - long term memory [1 - 1year]
+    Goal - recruit a sse on java fsd 
+         - generate a jd
+         - post a job posting in naukri, internal portal 
+         - filler intereste resume 
+         - schedule your interview by contacting candidates [whatsapp]
+         ...
+         - release a offer letter
+
+University :db
+    1. math - pdf  -> 100 
+        fourier series
+    2. science - pdf -> 50
+        fourier series
+    3. ai - pdf - 25
+
+search query: 
+    prompt = "explain fourier series in simple terms"
+    embedings = voyage_client.embed_text(prompt)
+    query = Cosine_Similarity(embedings,db) -> semantic
+        results = 2 chunks 
+        [text]+prompt
+    LLM = response 
+
+
+    ResultMessage(subtype='success', duration_ms=5645, duration_api_ms=4885, is_error=False, num_turns=2, session_id='3c9b8ba2-4be7-485a-bbf5-8df45d1bc31c', stop_reason='end_turn', total_cost_usd=0.0302155, usage={'input_tokens': 16, 'cache_creation_input_tokens': 21450, 'cache_read_input_tokens': 16740, 'output_tokens': 242, 'server_tool_use': {'web_search_requests': 0, 'web_fetch_requests': 0}, 'service_tier': 'standard', 'cache_creation': {'ephemeral_1h_input_tokens': 0, 'ephemeral_5m_input_tokens': 21450}, 'inference_geo': 'not_available', 'iterations': [{'input_tokens': 6, 'output_tokens': 108, 'cache_read_input_tokens': 16740, 'cache_creation_input_tokens': 2406, 'cache_creation': {'ephemeral_5m_input_tokens': 2406, 'ephemeral_1h_input_tokens': 0}, 'type': 'message'}], 'speed': 'standard'}, result='This directory contains:\n\n1. **`.env`** - Environment configuration file (190 bytes)\n2. **`001-Agentic-AI-Basics.ipynb`** - A Jupyter notebook on Agentic AI Basics (25KB)\n3. **`002_BuiltinTools/`** - A directory (subdirectory with 9 items inside)\n\nWould you like me to explore any of these files or directories in more detail?', structured_output=None, model_usage={'claude-haiku-4-5-20251001': {'inputTokens': 443, 'outputTokens': 12, 'cacheReadInputTokens': 0, 'cacheCreationInputTokens': 0, 'webSearchRequests': 0, 'costUSD': 0.000503, 'contextWindow': 200000, 'maxOutputTokens': 32000}, 'claude-haiku-4-5': {'inputTokens': 16, 'outputTokens': 242, 'cacheReadInputTokens': 16740, 'cacheCreationInputTokens': 21450, 'webSearchRequests': 0, 'costUSD': 0.0297125, 'contextWindow': 200000, 'maxOutputTokens': 32000}}, permission_denials=[], deferred_tool_use=None, errors=None, api_error_status=None, uuid='857f4d86-522f-44f3-8d58-e8b785a31b47')
+
+
+
+    query({systemmessage: "use winscp for file size more than 1gb, "}, config {tools= [bash, winscp]})
